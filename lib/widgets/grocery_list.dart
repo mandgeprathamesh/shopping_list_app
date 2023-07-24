@@ -96,7 +96,11 @@ class _GroceryListState extends State<GroceryList> {
   @override
   Widget build(BuildContext context) {
     Widget content = Center(
-      child: Text("No Items There!.."),
+      child: Text(
+        "No Items There ",
+        style:
+            TextStyle(fontSize: 25, color: Color.fromARGB(255, 238, 219, 148)),
+      ),
     );
     if (_isloading) {
       content = Center(
@@ -138,7 +142,12 @@ class _GroceryListState extends State<GroceryList> {
       appBar: AppBar(
         title: Text("Your Groceries"),
         actions: [
-          IconButton(onPressed: _additem, icon: Icon(Icons.add)),
+          IconButton(
+              onPressed: _additem,
+              icon: Icon(
+                Icons.add,
+                color: Color.fromARGB(255, 243, 244, 245),
+              )),
         ],
       ),
       body: content,
